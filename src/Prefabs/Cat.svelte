@@ -1,6 +1,5 @@
 <script lang="ts">
   import Circle from '../Drawing/Circle.svelte';
-  import Group from '../Drawing/Group.svelte';
   import Line from '../Drawing/Line.svelte';
   import Svg from '../Drawing/Svg.svelte';
   import { circle, line } from '../Drawing/utils';
@@ -16,9 +15,9 @@
   <Circle attrs={head} />
   <Circle attrs={leftEye} />
   <Circle attrs={rightEye} />
-  <Group id="whiskers">
+  <g id="whiskers">
     <Line attrs={leftWhisker} />
     <Line attrs={rightWhisker} />
-  </Group>
+  </g>
   <use xlink:href="#whiskers" transform="scale(-1 1) translate(-140 0)" />
 </Svg>
