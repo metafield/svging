@@ -5,7 +5,7 @@
   export let height: string;
 </script>
 
-<svg {width} {height}>
+<svg {width} {height} xmlns="http://www.w3.org/2000/svg">
   <title>{title}</title>
   <desc>{desc}</desc>
   <slot />
