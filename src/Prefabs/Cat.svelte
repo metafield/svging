@@ -20,4 +20,5 @@
     <Line attrs={leftWhisker} />
     <Line attrs={rightWhisker} />
   </Group>
+  <use xlink:href="#whiskers" transform="scale(-1 1) translate(-140 0)" />
 </Svg>
