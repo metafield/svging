@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { LineAttrs } from '../types';
-  export let attrs: LineAttrs;
+  import type { LineProps } from '../types';
+  export let props: LineProps;
 </script>
 
-<line {...attrs} />
+<line {...props} />

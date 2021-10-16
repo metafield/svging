@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { CircleAttrs } from '../types';
-  export let attrs: CircleAttrs;
+  import type { CircleProps } from '../types';
+  export let props: CircleProps;
 </script>
 
-<circle {...attrs} />
+<circle {...props} />
