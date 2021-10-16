@@ -15,3 +15,10 @@
   <desc>{props.desc}</desc>
   <slot />
 </svg>
+
+<style>
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+</style>

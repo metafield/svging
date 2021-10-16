@@ -4,6 +4,7 @@
 
 <Svg props={{ title: 'Cat', desc: 'A cat', style: 'background-color: #222;' }}>
   <g id="lines" style="stroke: white; fill: none;">
+    <!-- whiskers -->
     <g id="whiskers">
       <line x1="75" y1="95" x2="135" y2="85" />
       <line x1="75" y1="95" x2="135" y2="105" />
@@ -20,6 +21,3 @@
     <use xlink:href="#whiskers" transform="scale(-1 1) translate(-140 0)" />
   </g>
 </Svg>
-
-<style>
-</style>
