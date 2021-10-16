@@ -1,33 +1,25 @@
 <script lang="ts">
-  import Circle from '../Drawing/Circle.svelte';
-  import Line from '../Drawing/Line.svelte';
   import Svg from '../Drawing/Svg.svelte';
-  import { circle, line } from '../Drawing/utils';
-
-  const head = circle(70, 95, 50, 'stroke:black; fill: none');
-  const leftEye = circle(55, 80, 5, 'stroke:black; fill: #339933');
-  const rightEye = circle(85, 80, 5, 'stroke:black; fill: #339933');
-  const leftWhisker = line(75, 95, 135, 85, 'stroke:black;');
-  const rightWhisker = line(75, 95, 135, 105, 'stroke:black;');
 </script>
 
-<Svg props={{ title: 'Cat', desc: 'A cat' }}>
-  <Circle props={head} />
-  <Circle props={leftEye} />
-  <Circle props={rightEye} />
-  <g id="whiskers">
-    <Line props={leftWhisker} />
-    <Line props={rightWhisker} />
+<Svg props={{ title: 'Cat', desc: 'A cat', style: 'background-color: #222;' }}>
+  <g id="lines" style="stroke: white; fill: none;">
+    <g id="whiskers">
+      <line x1="75" y1="95" x2="135" y2="85" />
+      <line x1="75" y1="95" x2="135" y2="105" />
+    </g>
+    <!-- head -->
+    <circle cx="70" cy="95" r="50" style="#339933;" />
+    <!-- eyes -->
+    <circle cx="55" cy="80" r="5" style="#339933;" />
+    <circle cx="85" cy="80" r="5" style="#339933;" />
+    <!-- ears -->
+    <polyline points="108 62, 90 10, 70 45, 50, 10, 32, 62" />
+    <!-- mouth -->
+    <polyline points="35 110, 45 120, 70, 115, 95 120, 105, 110" />
+    <use xlink:href="#whiskers" transform="scale(-1 1) translate(-140 0)" />
   </g>
-  <!-- ears -->
-  <polyline
-    points="108 62, 90 10, 70 45, 50, 10, 32, 62"
-    style="stroke: black; fill: none;"
-  />
-  <!-- mouth -->
-  <polyline
-    points="35 110, 45 120, 70, 115, 95 120, 105, 110"
-    style="stroke: black; fill: none;"
-  />
-  <use xlink:href="#whiskers" transform="scale(-1 1) translate(-140 0)" />
 </Svg>
+
+<style>
+</style>

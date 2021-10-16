@@ -1,9 +1,11 @@
 <script lang="ts">
   import type { SVGProps } from '../types';
+
   export let props: SVGProps;
 </script>
 
 <svg
+  style={props.style}
   width={props.width}
   height={props.height}
   xmlns="http://www.w3.org/2000/svg"
